@@ -1,16 +1,17 @@
-var score;
-var result;
-var user=0;
-var comp=0;
+let score;
+let result;
+let user=0;
+let comp=0;
+let finnish;//declaration of variables
 function getComputerChoice(){
-    var gameArray = [
+    let gameArray = [
         "rock",
         "paper",
         "scissors"
     ];
-    var computerSelectionIndex = Math.floor(Math.random()*gameArray.length);
-    var computerSelection = gameArray[computerSelectionIndex];
-    return computerSelection;
+    let computerSelectionIndex = Math.floor(Math.random()*gameArray.length);
+    let computerSelection = gameArray[computerSelectionIndex];
+    return computerSelection; //function to get random choice by the comp
 }
 function playRound(playerSelection, computerSelection) {
 
@@ -42,7 +43,8 @@ function playRound(playerSelection, computerSelection) {
         result = "TIE";
          score = 0;
     }
-    return result, score;
+    return result, score; //results from a round
+    // result to be screened and score to help in the main game
   }
 
 function game(){
@@ -67,15 +69,15 @@ function game(){
     }
     console.log(comp)
     console.log(user)
-    if (comp>user){
-        var finnish = "YOU LOSE";
-    } else if (user<comp){
-        var finnish = "YOU WIN";
+    if (comp>>user){
+         finnish = "YOU LOSE";
+    } else if (user<<comp){
+         finnish = "YOU WIN";
     }
     else{
-        var finnish = "it's a TIE";
+        finnish = "it's a TIE";
     }
-    return finnish; 
+    return finnish; //ended main game function with 5 rounds
      
 }
 console.log(game());
